@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "easy-hotel": {
+    "easy-internal-sale": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/easy-hotel",
+            "outputPath": "dist/easy-internal-sale",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bulma/css/bulma.min.css",
               "src/styles.sass"
             ],
             "scripts": []
@@ -66,18 +67,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "easy-hotel:build"
+            "browserTarget": "easy-internal-sale:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "easy-hotel:build:production"
+              "browserTarget": "easy-internal-sale:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "easy-hotel:build"
+            "browserTarget": "easy-internal-sale:build"
           }
         },
         "test": {
@@ -114,15 +115,21 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "easy-hotel:serve"
+            "devServerTarget": "easy-internal-sale:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "easy-hotel:serve:production"
+              "devServerTarget": "easy-internal-sale:serve:production"
             }
           }
         }
       }
-    }},
-  "defaultProject": "easy-hotel"
+    }
+  },
+  "defaultProject": "easy-internal-sale",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }
