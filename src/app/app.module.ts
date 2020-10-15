@@ -7,6 +7,7 @@ import { LandpageComponent } from './components/landpage/landpage.component';
 import { LoginComponent } from './components/login/login.component';
 import { CampaignShowcaseComponent } from './components/campaign-showcase/campaign-showcase.component';
 import { FormsModule } from '@angular/forms';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { FormsModule } from '@angular/forms';
     LandpageComponent,
     LoginComponent,
     CampaignShowcaseComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
